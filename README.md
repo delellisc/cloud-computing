@@ -101,4 +101,98 @@ This command is short for `ip address`. Below, the expected output;
        valid_lft forever preferred_lft forever
 ```
 
+## Accessing my virtual machine for the class
+To access it via ssh:
+```sh
+ssh aluno@10.49.6.13
+```
+
+To authenticate with my institution ID and 
+```sh
+internet.sh
+```
+
 ---
+
+```sh
+docker container run hello-world
+```
+
+Output:
+```sh
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+17eec7bbc9d7: Pull complete 
+Digest: sha256:54e66cc1dd1fcb1c3c58bd8017914dbed8701e2d8c74d9262e26bd9cc1642d31
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+[...]
+```
+
+---
+
+```sh
+docker ps
+```
+
+Output:
+```sh
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+---
+
+```sh
+docker images
+```
+
+Output:
+```sh
+REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
+hello-world                   latest    1b44b5a3e06a   6 weeks ago    10.1kB
+gcr.io/k8s-minikube/kicbase   v0.0.47   795ea6a69ce6   4 months ago   1.31GB
+```
+
+---
+
+```sh
+docker container ps -a
+```
+
+Output:
+```sh
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED         STATUS                     PORTS     NAMES
+2e7e0ef8d093   hello-world                           "/hello"                 3 minutes ago   Exited (0) 3 minutes ago             compassionate_gagarin
+6b6d7730819a   gcr.io/k8s-minikube/kicbase:v0.0.47   "/usr/local/bin/entr…"   2 weeks ago     Exited (130) 2 weeks ago             minikube
+```
+
+---
+
+```sh
+docker run -it ubuntu bash
+```
+
+Output
+```sh
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+953cdd413371: Pull complete 
+Digest: sha256:353675e2a41babd526e2b837d7ec780c2a05bca0164f7ea5dbbd433d21d166fc
+Status: Downloaded newer image for ubuntu:latest
+root@1ac33b9d24cd:/# 
+```
+
+---
+
+```sh
+```
+
+<!-- 
+- a container has its own network interfaces
+- it works through a bridge with the machine running the docker service
+- docker0 is the name of the bridge
+- this isolation process is kinda of good
+- iptables for port redirections
+ -->
