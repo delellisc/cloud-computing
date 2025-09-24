@@ -187,6 +187,32 @@ root@1ac33b9d24cd:/#
 ---
 
 ```sh
+docker container run -ti centos:7
+Unable to find image 'centos:7' locally
+7: Pulling from library/centos
+2d473b07cdd5: Pull complete 
+Digest: sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4
+Status: Downloaded newer image for centos:7
+```
+
+```sh
+[root@be1a3fbc25cb /]# cat /etc/redhat-release 
+CentOS Linux release 7.9.2009 (Core)
+```
+
+---
+
+```sh
+aluno@controlplane:~$ docker container run -d -ti centos:7
+16c1c2aef855db08d27385d409bc1c8de642f265b31246b7e2eea96d4aa6588f
+aluno@controlplane:~$ docker ps
+CONTAINER ID   IMAGE      COMMAND       CREATED         STATUS         PORTS     NAMES
+0bd9d980c0d4   centos:7   "/bin/bash"   8 seconds ago   Up 8 seconds             loving_carson
+```
+
+---
+
+```sh
 ```
 
 <!-- 
