@@ -1,0 +1,198 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% quotes
+\usepackage{dirtytalk}
+
+% code blocks
+\usepackage[outputdir=build, cachedir=build/_minted-notes]{minted}
+
+\title{Lectures Notes on Cloud Computing}
+\author{Camilo de Lellis}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Aula - 09/09/2025}
+Conteúdos ministrados: Aula 00 - Apresentação da disciplina; - Aula 01 - Histórico e Contextualização dos sistemas de computação em Nuvem.
+
+\subsection{Ementa da Disciplina}
+\textbf{Curso:} Curso Superior de Tecnologia em Sistemas para Internet
+\textbf{Disciplina:} Desenvolvimento Web para a Nuvem \textbf{Carga-Horária:} 60h (80h/a)
+\textbf{Pré-Requisito(s):} Desenvolvimento Web Back-end \textbf{Número de créditos:} 4
+\begin{center}
+EMENTA
+\end{center}
+Conhecer o estado da arte sobre desenvolvimento web para a nuvem.
+\begin{center}
+PROGRAMA
+\end{center}
+\begin{center}
+Objetivos
+\end{center}
+\begin{itemize}
+      \item Aprender sobre os modelos de computação em nuvem;
+      \item Conhecer os desafios do ambiente em nuvem;
+      \item Conhecer cenários de utilização em ambientes em nuvem;
+      \item Conhecer e desenvolver softwares como serviço.
+\end{itemize}
+\begin{center}
+Bases Científico-Tecnológicas (Conteúdos)
+\end{center}
+\begin{itemize}
+      \item 1. Princípios
+      \begin{itemize}
+           \item 1.1. Histórico e Contextualização dos sistemas de computação em Nuvem;
+           \item 1.2. Introdução aos tipos de nuvens;
+           \item 1.3. Benefícios, desafios e riscos das plataformas de serviços;
+           \item 1.4. Cenários de Utilização;
+           \item 1.5. Modelos de negócios aplicáveis às nuvens.
+      \end{itemize}
+      \item 2. Modelos de Computação em Nuvem
+      \begin{itemize}
+            \item 2.1. Software como serviço (SaaS);
+            \item 2.2. Infraestrutura como serviço (Iaas);
+            \item 2.3. Plataforma como serviço (PaaS);
+            \item 2.4. Middlewares para computação em nuvem.
+      \end{itemize}
+      \item 3. Configuração
+      \begin{itemize}
+            \item 3.1. Administração e Regras;
+            \item 3.2. Escalonamento;
+            \item 3.3. Balanceamento de recursos em computação nas nuvens.
+      \end{itemize}
+      \item 4. Desafios de Programação para Computação em Nuvem
+      \begin{itemize}
+            \item 4.1. Segurança;
+            \item 4.2. Privacidade;
+            \item 4.3. Legado
+            \begin{itemize}
+                  \item 4.3.1. Migração de sistemas para nuvem.
+            \end{itemize}
+      \end{itemize}
+      \item 5. Gerenciamento de Dados e Otimização
+      \begin{itemize}
+            \item 5.1. Gerenciamento de dados e desafios de manutenção nos sistemas de computação nas nuvens;
+            \item 5.2. Visão geral de técnicas de otimização incluindo o gerenciamento de consumo de energia elétrica.
+      \end{itemize}
+      \item 6. Migração e Transformação de Servidores
+      \begin{itemize}
+            \item 6.1. Migração e transformação de servidores para provedores de nuvem;
+            \item 6.2. Desafios na área de descoberta do ambiente fonte;
+            \item 6.3. Definição de ambiente destino;
+            \item 6.4. Decisões de estratégias de migração e transformação.
+      \end{itemize}
+\end{itemize}
+\begin{center}
+Procedimentos Metodológicos
+\end{center}
+Aulas expositivas; estudos dirigidos; seminários; vídeos; dinâmicas de grupo; visitas técnicas; palestras.
+\begin{center}
+Recursos Didáticos
+\end{center}
+Quadro branco e pincel; computador; internet; projetor de multimídia.
+\begin{center}
+Avaliação
+\end{center}
+Trabalho escrito; apresentação de seminários; relatórios; avaliação escrita.
+\begin{center}
+Bibliografia Básica
+\end{center}
+\begin{itemize}
+      \item 1. ERL, Thomas. Cloud Computing: Concepts, Technology \& Architecture. Editora Prentice Hall. 2013.
+      \item 2. VELTE, Anthony T. Cloud Computing. Computação Em Nuvem: Uma Abordagem Prática. Alta Books. 2012.
+      \item 3. FOX, Armando; PATTERSON, David. Construindo Software como Servico (SaaS): Uma Abordagem Agil Usando Computacao em Nuvem (Portuguese Edition). Editora Strawberry Canyon LLC. 2015.
+\end{itemize}
+\begin{center}
+Bibliografia Complementar
+\end{center}
+\begin{itemize}
+      \item 1. BRIAN, J.S. Chee; FRANKLIN, Jr., Curtis. Computação em Nuvem: Cloud Computing - Tecnologias e Estratégias. 1. ed. M.Books. 2013.
+      \item 2. Above the Clouds: A Berkeley View of Cloud Computing. Relatório Técnico. 2009.
+      \item 3. BIRMAN, Kenneth. Guide to Reliable Distributed Systems: Building High-Assurance Applications and Cloud-Hosted Services. Springer. 2012.
+      \item 4. VERAS, Manoel. Computação em Nuvem: Nova Arquitetura de TI. 1. ed. 2015.
+      \item 5. KAVIS, Michael J. Architecting the Cloud: Design Decisions for Cloud Computing Service Models (SaaS, PaaS, and IaaS). Editora Wiley. 2014.
+\end{itemize}
+\begin{center}
+Software(s) de Apoio:
+\end{center}
+\begin{itemize}
+      \item IDEs.
+\end{itemize}
+
+\subsection{Histórico e Contextualização dos sistemas de computação em Nuvem.}
+...
+
+\section{Aula - 10/09/2025}
+Conteúdos ministrados: Aula 02: - Surgimento dos Containers -Orquestração de Containers -Kubernetes
+
+\subsection{Aula 02: - Surgimento dos Containers -Orquestração de Containers -Kubernetes}
+...
+
+\section{Aula - 16/09/2025}
+Conteúdos ministrados: Introdução aos tipos de nuvens e Benefícios, desafios e riscos das plataformas de serviços.
+
+\subsection{Introdução aos tipos de nuvens e Benefícios, desafios e riscos das plataformas de serviços.}
+...
+
+\section{Aula - 17/09/2025}
+Conteúdos ministrados: SAAS, IAAS e PAAS - Introdução a Containers
+
+\subsection{SAAS, IAAS e PAAS - Introdução a Containers}
+...
+
+\section{Aula - 23/09/2025}
+Conteúdos ministrados: Operações com container;
+
+\subsection{Operações com container;}
+...
+
+\section{Aula - 24/09/2025}
+Conteúdos ministrados: Operações com container.
+
+\subsection{Operações com container.}
+...
+
+\section{Aula - 30/09/2025}
+Conteúdos ministrados: Configurações de limites no container docker.
+
+\subsection{Configurações de limites no container docker.}
+...
+
+\section{Aula - 07/10/2025}
+Conteúdos ministrados: Configuração de recursos de hardware para conteineres.
+
+\subsection{Configuração de recursos de hardware para conteineres.}
+...
+
+\section{Aula - 08/10/2025}
+Conteúdos ministrados: Volumes em docker
+
+\subsection{Volumes em docker}
+...
+
+\section{Aula - 14/10/2025}
+Conteúdos ministrados: Configuração de volume reutilizável com read-only em docker.
+
+\subsection{Configuração de volume reutilizável com read-only em docker.}
+...
+
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
