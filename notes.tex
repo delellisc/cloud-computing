@@ -229,6 +229,73 @@ To get the default page and check it's contents:
 \end{minted} 
 
 \section{Lecture - 22/10/2025}
+Content taught: correction of the exam, creating and managing images.
+
+\subsection{Question 6}
+The wrong Dockerfile was:
+\begin{minted}{bash}
+      # Broken Dockerfile
+      FROM nginx:latest
+
+      # Copying HTML files to a folder
+      COPY ./site /usr/share/nginx/html_site
+
+      # Default port to Nginx
+      EXPOSE 80
+\end{minted}
+
+To run the code wehad to change some things. The first thing to change about the dockerfile was the source directory \textbf{site} that did not exist from the first place. Then we had to change the target folder. The default nginx folder was \textbf{/usr/share/nginx/html}. So the correct dockerfile would be something like this:
+
+\begin{minted}{bash}
+      # Fixed Dockerfile
+      FROM nginx:latest
+
+      # Copying HTML files to the correct folder
+      COPY ./site /usr/share/nginx/html
+
+      # Default port to Nginx
+      EXPOSE 80
+\end{minted}
+
+\subsection{How to create a new Docker environment}
+The first step to create a environment inside a docker container, is to create a Dockerfile. \\ We can then build the Dockerfile to create an image. \\ After the image is built, we can run a new container using our newly made image.
+
+Example dockerfile:
+\begin{minted}{bash}
+      FROM debian
+
+      RUN echo "hello, world"
+\end{minted}
+
+To build it, just run:
+\begin{minted}{bash}
+      # Inside the folder where the Dockerfile is
+      docker build -t <image-name>:<version-name> .
+\end{minted}
+
+\subsection{FROM command}
+Using the \href{https://docs.docker.com/reference/dockerfile/#from}{FROM command} you can select which image you can base your Dockerfile upon.
+
+\subsection{RUN command}
+The \href{https://docs.docker.com/reference/dockerfile/#run}{RUN command} lets you execute bash commands when creating the image while reading the Dockerfile.
+
+\subsection{ENTRYPOINT command}
+The \href{https://docs.docker.com/reference/dockerfile/#entrypoint}{ENTRYPOINT command} let we use an executable when initializing the image.
+
+\subsection{CMD command}
+We can use \href{https://docs.docker.com/reference/dockerfile/#cmd}{CMD command} to when passing parameters to the ENTRYPOINT command.
+
+\subsection{Multi-stage builds}
+\href{https://docs.docker.com/build/building/multi-stage/}{Multi-stage builds}...
+
+\subsection{Docker container commit}
+\href{https://docs.docker.com/reference/cli/docker/container/commit/}{Docker container commits} seem to me like version control for docker containers, meaning that you can change the image and have a version controller that remembers the last version.
+
+\subsection{Best practices}
+1. Minimal base images\\2. Minimal layers\\3. Cleaning after the packages installations\\4. Non-root app running
+
+\subsection{Images management commands}
+docker image ls\\docker image rm\\docker prune\\docker tag
 
 \bibliographystyle{alpha}
 \bibliography{sample}
