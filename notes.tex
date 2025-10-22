@@ -191,6 +191,44 @@ Conteúdos ministrados: Configuração de volume reutilizável com read-only em 
 \subsection{Configuração de volume reutilizável com read-only em docker.}
 ...
 
+\section{Exam - 21/10/2025}
+Content of the exam: docker concepts and fundamentals.
+
+\subsection{Question 6}
+We were presented a broken dockerfile. To create the fixed one, the following command was used:
+
+\begin{minted}{bash}
+      touch Dockerfile && echo "FROM nginx:latest
+      COPY ./sites /usr/share/nginx/html
+      EXPOSE 80" >> Dockerfile
+\end{minted}
+
+Before building the image and running the container, we need to create the folder "sites" and a file to change the \textbf{nginx} default \textbf{index.html}. This was done:
+
+\begin{minted}{bash}
+      mkdir sites
+      touch sites/index.html
+      echo "testando" >> sites/index.html
+\end{minted}
+
+To build the image:
+\begin{minted}{bash}
+      docker build -t exam:latest .
+\end{minted}
+
+To run a container:
+\begin{minted}{bash}
+      # You can also assign a name to it using --name
+      docker run -ti -d -p 8080:80 exam:latest
+\end{minted}
+
+To get the default page and check it's contents:
+\begin{minted}{bash}
+      wget localhost:8080
+      cat index.html 
+\end{minted} 
+
+\section{Lecture - 22/10/2025}
 
 \bibliographystyle{alpha}
 \bibliography{sample}
