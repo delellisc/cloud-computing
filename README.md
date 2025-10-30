@@ -422,6 +422,19 @@ label="fig:nginx reverse proxy"></span>Draft of the use of nginx as a
 reverse proxy.</figcaption>
 </figure>
 
+# Lecture - 29/10/2025
+
+Content taught: Docker Compose
+
+# Assignment - 05/11/2025
+
+Assignment description: Resolver o problema relacionado ao docker
+compose, há um arquivo em anexo e este está com problema de sintaxe, ao
+executar e tentar acessar a aplicação no navegador é apresentado a
+seguinte mensagem "Error establishing a database connection". Dessa
+forma, este pequeno desafio está na verificação e conserto do arquivo
+docker-compose.yml para tornar o wordpress funcional.
+
 # LaTeX
 
 I shall take notes with LaTeXand then convert them to Markdown. To
