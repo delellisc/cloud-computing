@@ -265,14 +265,14 @@ The wrong Dockerfile was:
 To run the code wehad to change some things. The first thing to change about the dockerfile was the source directory \textbf{site} that did not exist from the first place. Then we had to change the target folder. The default nginx folder was \textbf{/usr/share/nginx/html}. So the correct dockerfile would be something like this:
 
 \begin{minted}{bash}
-      # Fixed Dockerfile
-      FROM nginx:latest
+# Fixed Dockerfile
+FROM nginx:latest
 
-      # Copying HTML files to the correct folder
-      COPY ./site /usr/share/nginx/html
+# Copying HTML files to the correct folder
+COPY ./site /usr/share/nginx/html
 
-      # Default port to Nginx
-      EXPOSE 80
+# Default port to Nginx
+EXPOSE 80
 \end{minted}
 
 \subsection{How to create a new Docker environment}
@@ -280,15 +280,15 @@ The first step to create a environment inside a docker container, is to create a
 
 Example dockerfile:
 \begin{minted}{bash}
-      FROM debian
+FROM debian
 
-      RUN echo "hello, world"
+RUN echo "hello, world"
 \end{minted}
 
 To build it, just run:
 \begin{minted}{bash}
-      # Inside the folder where the Dockerfile is
-      docker build -t <image-name>:<version-name> .
+# Inside the folder where the Dockerfile is
+docker build -t <image-name>:<version-name> .
 \end{minted}
 
 \subsection{FROM command}
@@ -338,6 +338,15 @@ Content taught: Docker Compose
 
 \section{Assignment - 05/11/2025}
 Assignment description: Resolver o problema relacionado ao docker compose, há um arquivo em anexo e este está com problema de sintaxe, ao executar e tentar acessar a aplicação no navegador é apresentado a seguinte mensagem "Error establishing a database connection".  Dessa forma, este pequeno desafio está na verificação e conserto do arquivo docker-compose.yml para tornar o wordpress funcional.
+
+We are presented with a broken \texttt{.yml} file, available \href{https://github.com/delellisc/cloud-computing/blob/master/assignments/05-11/broken-docker-compose.yml}{here}. When we try to run it using \texttt{docker compose}, everything apparently runs fine. However, when \texttt{curling} the machine where the Wordpress is runnig, we get something like this:
+
+\begin{minted}{bash}
+[...]
+<body id="error-page">
+        <div class="wp-die-message"><h1>Error establishing a database connection</h1></div></body>
+</html>
+\end{minted}
 
 % -----------------------------------------------------------
 % -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
