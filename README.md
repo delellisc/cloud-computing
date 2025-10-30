@@ -1,224 +1,432 @@
-# Cloud computing in Golang
-This is a repo to record my findings while learning cloud computing and applications using Go.
+# Aula - 09/09/2025
 
-## Script running for a undertemined amount of time
-To run the script:
-```sh
-chmod +x ./bash-script/count.sh
-./bash-script/count.sh
+Conteúdos ministrados: Aula 00 - Apresentação da disciplina; - Aula 01 -
+Histórico e Contextualização dos sistemas de computação em Nuvem.
+
+## Ementa da Disciplina
+
+**Curso:** Curso Superior de Tecnologia em Sistemas para Internet
+**Disciplina:** Desenvolvimento Web para a Nuvem **Carga-Horária:** 60h
+(80h/a) **Pré-Requisito(s):** Desenvolvimento Web Back-end **Número de
+créditos:** 4
+
+<div class="center">
+
+EMENTA
+
+</div>
+
+Conhecer o estado da arte sobre desenvolvimento web para a nuvem.
+
+<div class="center">
+
+PROGRAMA
+
+</div>
+
+<div class="center">
+
+Objetivos
+
+</div>
+
+- Aprender sobre os modelos de computação em nuvem;
+
+- Conhecer os desafios do ambiente em nuvem;
+
+- Conhecer cenários de utilização em ambientes em nuvem;
+
+- Conhecer e desenvolver softwares como serviço.
+
+<div class="center">
+
+Bases Científico-Tecnológicas (Conteúdos)
+
+</div>
+
+- 1\. Princípios
+
+  - 1.1. Histórico e Contextualização dos sistemas de computação em
+    Nuvem;
+
+  - 1.2. Introdução aos tipos de nuvens;
+
+  - 1.3. Benefícios, desafios e riscos das plataformas de serviços;
+
+  - 1.4. Cenários de Utilização;
+
+  - 1.5. Modelos de negócios aplicáveis às nuvens.
+
+- 2\. Modelos de Computação em Nuvem
+
+  - 2.1. Software como serviço (SaaS);
+
+  - 2.2. Infraestrutura como serviço (Iaas);
+
+  - 2.3. Plataforma como serviço (PaaS);
+
+  - 2.4. Middlewares para computação em nuvem.
+
+- 3\. Configuração
+
+  - 3.1. Administração e Regras;
+
+  - 3.2. Escalonamento;
+
+  - 3.3. Balanceamento de recursos em computação nas nuvens.
+
+- 4\. Desafios de Programação para Computação em Nuvem
+
+  - 4.1. Segurança;
+
+  - 4.2. Privacidade;
+
+  - 4.3. Legado
+
+    - 4.3.1. Migração de sistemas para nuvem.
+
+- 5\. Gerenciamento de Dados e Otimização
+
+  - 5.1. Gerenciamento de dados e desafios de manutenção nos sistemas de
+    computação nas nuvens;
+
+  - 5.2. Visão geral de técnicas de otimização incluindo o gerenciamento
+    de consumo de energia elétrica.
+
+- 6\. Migração e Transformação de Servidores
+
+  - 6.1. Migração e transformação de servidores para provedores de
+    nuvem;
+
+  - 6.2. Desafios na área de descoberta do ambiente fonte;
+
+  - 6.3. Definição de ambiente destino;
+
+  - 6.4. Decisões de estratégias de migração e transformação.
+
+<div class="center">
+
+Procedimentos Metodológicos
+
+</div>
+
+Aulas expositivas; estudos dirigidos; seminários; vídeos; dinâmicas de
+grupo; visitas técnicas; palestras.
+
+<div class="center">
+
+Recursos Didáticos
+
+</div>
+
+Quadro branco e pincel; computador; internet; projetor de multimídia.
+
+<div class="center">
+
+Avaliação
+
+</div>
+
+Trabalho escrito; apresentação de seminários; relatórios; avaliação
+escrita.
+
+<div class="center">
+
+Bibliografia Básica
+
+</div>
+
+- 1\. ERL, Thomas. Cloud Computing: Concepts, Technology & Architecture.
+  Editora Prentice Hall. 2013.
+
+- 2\. VELTE, Anthony T. Cloud Computing. Computação Em Nuvem: Uma
+  Abordagem Prática. Alta Books. 2012.
+
+- 3\. FOX, Armando; PATTERSON, David. Construindo Software como Servico
+  (SaaS): Uma Abordagem Agil Usando Computacao em Nuvem (Portuguese
+  Edition). Editora Strawberry Canyon LLC. 2015.
+
+<div class="center">
+
+Bibliografia Complementar
+
+</div>
+
+- 1\. BRIAN, J.S. Chee; FRANKLIN, Jr., Curtis. Computação em Nuvem:
+  Cloud Computing - Tecnologias e Estratégias. 1. ed. M.Books. 2013.
+
+- 2\. Above the Clouds: A Berkeley View of Cloud Computing. Relatório
+  Técnico. 2009.
+
+- 3\. BIRMAN, Kenneth. Guide to Reliable Distributed Systems: Building
+  High-Assurance Applications and Cloud-Hosted Services. Springer. 2012.
+
+- 4\. VERAS, Manoel. Computação em Nuvem: Nova Arquitetura de TI. 1. ed.
+  2015.
+
+- 5\. KAVIS, Michael J. Architecting the Cloud: Design Decisions for
+  Cloud Computing Service Models (SaaS, PaaS, and IaaS). Editora Wiley.
+  2014.
+
+<div class="center">
+
+Software(s) de Apoio:
+
+</div>
+
+- IDEs.
+
+## Histórico e Contextualização dos sistemas de computação em Nuvem.
+
+...
+
+# Aula - 10/09/2025
+
+Conteúdos ministrados: Aula 02: - Surgimento dos Containers
+-Orquestração de Containers -Kubernetes
+
+## Aula 02: - Surgimento dos Containers -Orquestração de Containers -Kubernetes
+
+...
+
+# Aula - 16/09/2025
+
+Conteúdos ministrados: Introdução aos tipos de nuvens e Benefícios,
+desafios e riscos das plataformas de serviços.
+
+## Introdução aos tipos de nuvens e Benefícios, desafios e riscos das plataformas de serviços.
+
+...
+
+# Aula - 17/09/2025
+
+Conteúdos ministrados: SAAS, IAAS e PAAS - Introdução a Containers
+
+## SAAS, IAAS e PAAS - Introdução a Containers
+
+...
+
+# Aula - 23/09/2025
+
+Conteúdos ministrados: Operações com container;
+
+## Operações com container;
+
+...
+
+# Aula - 24/09/2025
+
+Conteúdos ministrados: Operações com container.
+
+## Operações com container.
+
+...
+
+# Aula - 30/09/2025
+
+Conteúdos ministrados: Configurações de limites no container docker.
+
+## Configurações de limites no container docker.
+
+...
+
+# Aula - 07/10/2025
+
+Conteúdos ministrados: Configuração de recursos de hardware para
+conteineres.
+
+## Configuração de recursos de hardware para conteineres.
+
+...
+
+# Aula - 08/10/2025
+
+Conteúdos ministrados: Volumes em docker
+
+## Volumes em docker
+
+...
+
+# Aula - 14/10/2025
+
+Conteúdos ministrados: Configuração de volume reutilizável com read-only
+em docker.
+
+## Configuração de volume reutilizável com read-only em docker.
+
+...
+
+# Exam - 21/10/2025
+
+Content of the exam: docker concepts and fundamentals.
+
+## Question 6
+
+We were presented a broken dockerfile. To create the fixed one, the
+following command was used:
+
+``` bash
+      touch Dockerfile && echo "FROM nginx:latest
+      COPY ./sites /usr/share/nginx/html
+      EXPOSE 80" >> Dockerfile
 ```
 
-To run it on the background:
-```sh
-./bash-script/count.sh &
+Before building the image and running the container, we need to create
+the folder "sites" and a file to change the **nginx** default
+**index.html**. This was done:
+
+``` bash
+      mkdir sites
+      touch sites/index.html
+      echo "testando" >> sites/index.html
 ```
 
----
+To build the image:
 
-How to see processes running in background:
-```sh
-ps -ef | grep count
+``` bash
+      docker build -t exam:latest .
 ```
 
-Output:
-```sh
-de-lell+   17859   11453  0 15:19 pts/12   00:00:00 /bin/bash ./bash-script/count.sh
-de-lell+   18176   18120  0 15:20 pts/13   00:00:00 grep --color=auto count
+To run a container:
+
+``` bash
+      # You can also assign a name to it using --name
+      docker run -ti -d -p 8080:80 exam:latest
 ```
 
----
+To get the default page and check it’s contents:
 
-Alternatively, using the `bg` command:
-```
-bg
-```
-
-Output:
-```
-bash: bg: job 1 already in background
+``` bash
+      wget localhost:8080
+      cat index.html 
 ```
 
---- 
+# Lecture - 22/10/2025
 
-To make a running process into a background process, simply press Crtl+Z while running the process:
-```sh
-^Z
-[1]+  Stopped                 ./bash-script/count.sh
+Content taught: correction of the exam, creating and managing images.
+
+## Question 6
+
+The wrong Dockerfile was:
+
+``` bash
+      # Broken Dockerfile
+      FROM nginx:latest
+
+      # Copying HTML files to a folder
+      COPY ./site /usr/share/nginx/html_site
+
+      # Default port to Nginx
+      EXPOSE 80
 ```
 
-To return this process to the foreground, use the following command:
-```sh
-fg 1
-./bash-script/count.sh
+To run the code wehad to change some things. The first thing to change
+about the dockerfile was the source directory **site** that did not
+exist from the first place. Then we had to change the target folder. The
+default nginx folder was **/usr/share/nginx/html**. So the correct
+dockerfile would be something like this:
+
+``` bash
+      # Fixed Dockerfile
+      FROM nginx:latest
+
+      # Copying HTML files to the correct folder
+      COPY ./site /usr/share/nginx/html
+
+      # Default port to Nginx
+      EXPOSE 80
 ```
 
----
+## How to create a new Docker environment
 
-To see the network interfaces of the docker serive, run the following command:
-```sh
-docker network ls
+The first step to create a environment inside a docker container, is to
+create a Dockerfile.  
+We can then build the Dockerfile to create an image.  
+After the image is built, we can run a new container using our newly
+made image.
+
+Example dockerfile:
+
+``` bash
+      FROM debian
+
+      RUN echo "hello, world"
 ```
 
-Expected output:
-```sh
-NETWORK ID     NAME                          DRIVER    SCOPE
-497861afe175   bridge                        bridge    local
-995a7930ad95   end-to-end-pipeline_default   bridge    local
-788c04e0983c   host                          host      local
-b31abab93739   none                          null      local
+To build it, just run:
+
+``` bash
+      # Inside the folder where the Dockerfile is
+      docker build -t <image-name>:<version-name> .
 ```
 
----
+## FROM command
 
-To see the network interfaces of my machine, use the following command:
+Using the [FROM
+command](https://docs.docker.com/reference/dockerfile/#from) you can
+select which image you can base your Dockerfile upon.
 
-```sh
-ip a
+## RUN command
+
+The [RUN command](https://docs.docker.com/reference/dockerfile/#run)
+lets you execute bash commands when creating the image while reading the
+Dockerfile.
+
+## ENTRYPOINT command
+
+The [ENTRYPOINT
+command](https://docs.docker.com/reference/dockerfile/#entrypoint) let
+we use an executable when initializing the image.
+
+## CMD command
+
+We can use [CMD
+command](https://docs.docker.com/reference/dockerfile/#cmd) to when
+passing parameters to the ENTRYPOINT command.
+
+## Multi-stage builds
+
+[Multi-stage
+builds](https://docs.docker.com/build/building/multi-stage/)...
+
+## Docker container commit
+
+[Docker container
+commits](https://docs.docker.com/reference/cli/docker/container/commit/)
+seem to me like version control for docker containers, meaning that you
+can change the image and have a version controller that remembers the
+last version.
+
+## Best practices
+
+1\. Minimal base images  
+2. Minimal layers  
+3. Cleaning after the packages installations  
+4. Non-root app running
+
+## Images management commands
+
+docker image ls  
+docker image rm  
+docker prune  
+docker tag
+
+## Network management
+
+Container’s network management.
+
+<figure id="fig:nginx reverse proxy">
+<img src="images/draft.jpg" />
+<figcaption><span id="fig:nginx reverse proxy"
+label="fig:nginx reverse proxy"></span>Draft of the use of nginx as a
+reverse proxy.</figcaption>
+</figure>
+
+# LaTeX
+
+I shall take notes with LaTeXand then convert them to Markdown. To
+convert it into my README.md, I’ll just use the following:
+
+``` bash
+pandoc main.tex -o README.md --from=latex --to=gfm
 ```
-
-This command is short for `ip address`. Below, the expected output;
-
-```sh
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host 
-       valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
-    link/ether 00:15:5d:a4:5c:fe brd ff:ff:ff:ff:ff:ff
-    inet 172.18.111.14/20 brd 172.18.111.255 scope global eth0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::215:5dff:fea4:5cfe/64 scope link 
-       valid_lft forever preferred_lft forever
-3: br-995a7930ad95: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
-    link/ether aa:38:70:b1:35:4d brd ff:ff:ff:ff:ff:ff
-    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-995a7930ad95
-       valid_lft forever preferred_lft forever
-4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
-    link/ether 7e:45:67:ce:9e:db brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-```
-
-## Accessing my virtual machine for the class
-To access it via ssh:
-```sh
-ssh aluno@10.49.6.13
-```
-
-To authenticate with my institution ID and 
-```sh
-internet.sh
-```
-
----
-
-```sh
-docker container run hello-world
-```
-
-Output:
-```sh
-Unable to find image 'hello-world:latest' locally
-latest: Pulling from library/hello-world
-17eec7bbc9d7: Pull complete 
-Digest: sha256:54e66cc1dd1fcb1c3c58bd8017914dbed8701e2d8c74d9262e26bd9cc1642d31
-Status: Downloaded newer image for hello-world:latest
-
-Hello from Docker!
-This message shows that your installation appears to be working correctly.
-[...]
-```
-
----
-
-```sh
-docker ps
-```
-
-Output:
-```sh
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-```
-
----
-
-```sh
-docker images
-```
-
-Output:
-```sh
-REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
-hello-world                   latest    1b44b5a3e06a   6 weeks ago    10.1kB
-gcr.io/k8s-minikube/kicbase   v0.0.47   795ea6a69ce6   4 months ago   1.31GB
-```
-
----
-
-```sh
-docker container ps -a
-```
-
-Output:
-```sh
-CONTAINER ID   IMAGE                                 COMMAND                  CREATED         STATUS                     PORTS     NAMES
-2e7e0ef8d093   hello-world                           "/hello"                 3 minutes ago   Exited (0) 3 minutes ago             compassionate_gagarin
-6b6d7730819a   gcr.io/k8s-minikube/kicbase:v0.0.47   "/usr/local/bin/entr…"   2 weeks ago     Exited (130) 2 weeks ago             minikube
-```
-
----
-
-```sh
-docker run -it ubuntu bash
-```
-
-Output
-```sh
-Unable to find image 'ubuntu:latest' locally
-latest: Pulling from library/ubuntu
-953cdd413371: Pull complete 
-Digest: sha256:353675e2a41babd526e2b837d7ec780c2a05bca0164f7ea5dbbd433d21d166fc
-Status: Downloaded newer image for ubuntu:latest
-root@1ac33b9d24cd:/# 
-```
-
----
-
-```sh
-docker container run -ti centos:7
-Unable to find image 'centos:7' locally
-7: Pulling from library/centos
-2d473b07cdd5: Pull complete 
-Digest: sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4
-Status: Downloaded newer image for centos:7
-```
-
-```sh
-[root@be1a3fbc25cb /]# cat /etc/redhat-release 
-CentOS Linux release 7.9.2009 (Core)
-```
-
----
-
-```sh
-aluno@controlplane:~$ docker container run -d -ti centos:7
-16c1c2aef855db08d27385d409bc1c8de642f265b31246b7e2eea96d4aa6588f
-aluno@controlplane:~$ docker ps
-CONTAINER ID   IMAGE      COMMAND       CREATED         STATUS         PORTS     NAMES
-0bd9d980c0d4   centos:7   "/bin/bash"   8 seconds ago   Up 8 seconds             loving_carson
-```
-
----
-
-```sh
-```
-
-<!-- 
-- a container has its own network interfaces
-- it works through a bridge with the machine running the docker service
-- docker0 is the name of the bridge
-- this isolation process is kinda of good
-- iptables for port redirections
- -->

@@ -310,7 +310,16 @@ Container's network management.
 \caption{\label{fig:nginx reverse proxy}Draft of the use of nginx as a reverse proxy.}
 \end{figure}
 
-\bibliographystyle{alpha}
-\bibliography{sample}
+
+\section{\LaTeX}
+I shall take notes with \LaTeX and then convert them to Markdown. To convert it into my README.md, I’ll just use the following:
+
+\begin{minted}{bash}
+pandoc main.tex -o README.md --from=latex --to=gfm
+\end{minted}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
 
 \end{document}
