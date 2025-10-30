@@ -266,9 +266,9 @@ We were presented a broken dockerfile. To create the fixed one, the
 following command was used:
 
 ``` bash
-      touch Dockerfile && echo "FROM nginx:latest
-      COPY ./sites /usr/share/nginx/html
-      EXPOSE 80" >> Dockerfile
+touch Dockerfile && echo "FROM nginx:latest
+COPY ./sites /usr/share/nginx/html
+EXPOSE 80" >> Dockerfile
 ```
 
 Before building the image and running the container, we need to create
@@ -276,29 +276,29 @@ the folder "sites" and a file to change the **nginx** default
 **index.html**. This was done:
 
 ``` bash
-      mkdir sites
-      touch sites/index.html
-      echo "testando" >> sites/index.html
+mkdir sites
+touch sites/index.html
+echo "testando" >> sites/index.html
 ```
 
 To build the image:
 
 ``` bash
-      docker build -t exam:latest .
+docker build -t exam:latest .
 ```
 
 To run a container:
 
 ``` bash
-      # You can also assign a name to it using --name
-      docker run -ti -d -p 8080:80 exam:latest
+# You can also assign a name to it using --name
+docker run -ti -d -p 8080:80 exam:latest
 ```
 
 To get the default page and check it’s contents:
 
 ``` bash
-      wget localhost:8080
-      cat index.html 
+wget localhost:8080
+cat index.html 
 ```
 
 # Lecture - 22/10/2025
@@ -310,14 +310,14 @@ Content taught: correction of the exam, creating and managing images.
 The wrong Dockerfile was:
 
 ``` bash
-      # Broken Dockerfile
-      FROM nginx:latest
+# Broken Dockerfile
+FROM nginx:latest
 
-      # Copying HTML files to a folder
-      COPY ./site /usr/share/nginx/html_site
+# Copying HTML files to a folder
+COPY ./site /usr/share/nginx/html_site
 
-      # Default port to Nginx
-      EXPOSE 80
+# Default port to Nginx
+EXPOSE 80
 ```
 
 To run the code wehad to change some things. The first thing to change
@@ -327,14 +327,14 @@ default nginx folder was **/usr/share/nginx/html**. So the correct
 dockerfile would be something like this:
 
 ``` bash
-      # Fixed Dockerfile
-      FROM nginx:latest
+# Fixed Dockerfile
+FROM nginx:latest
 
-      # Copying HTML files to the correct folder
-      COPY ./site /usr/share/nginx/html
+# Copying HTML files to the correct folder
+COPY ./site /usr/share/nginx/html
 
-      # Default port to Nginx
-      EXPOSE 80
+# Default port to Nginx
+EXPOSE 80
 ```
 
 ## How to create a new Docker environment
@@ -348,16 +348,16 @@ made image.
 Example dockerfile:
 
 ``` bash
-      FROM debian
+FROM debian
 
-      RUN echo "hello, world"
+RUN echo "hello, world"
 ```
 
 To build it, just run:
 
 ``` bash
-      # Inside the folder where the Dockerfile is
-      docker build -t <image-name>:<version-name> .
+# Inside the folder where the Dockerfile is
+docker build -t <image-name>:<version-name> .
 ```
 
 ## FROM command
@@ -434,6 +434,19 @@ executar e tentar acessar a aplicação no navegador é apresentado a
 seguinte mensagem "Error establishing a database connection". Dessa
 forma, este pequeno desafio está na verificação e conserto do arquivo
 docker-compose.yml para tornar o wordpress funcional.
+
+We are presented with a broken `.yml` file, available
+[here](https://github.com/delellisc/cloud-computing/blob/master/assignments/05-11/broken-docker-compose.yml).
+When we try to run it using `docker compose`, everything apparently runs
+fine. However, when `curling` the machine where the Wordpress is runnig,
+we get something like this:
+
+``` bash
+[...]
+<body id="error-page">
+        <div class="wp-die-message"><h1>Error establishing a database connection</h1></div></body>
+</html>
+```
 
 # LaTeX
 

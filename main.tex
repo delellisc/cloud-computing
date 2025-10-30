@@ -214,34 +214,34 @@ Content of the exam: docker concepts and fundamentals.
 We were presented a broken dockerfile. To create the fixed one, the following command was used:
 
 \begin{minted}{bash}
-      touch Dockerfile && echo "FROM nginx:latest
-      COPY ./sites /usr/share/nginx/html
-      EXPOSE 80" >> Dockerfile
+touch Dockerfile && echo "FROM nginx:latest
+COPY ./sites /usr/share/nginx/html
+EXPOSE 80" >> Dockerfile
 \end{minted}
 
 Before building the image and running the container, we need to create the folder "sites" and a file to change the \textbf{nginx} default \textbf{index.html}. This was done:
 
 \begin{minted}{bash}
-      mkdir sites
-      touch sites/index.html
-      echo "testando" >> sites/index.html
+mkdir sites
+touch sites/index.html
+echo "testando" >> sites/index.html
 \end{minted}
 
 To build the image:
 \begin{minted}{bash}
-      docker build -t exam:latest .
+docker build -t exam:latest .
 \end{minted}
 
 To run a container:
 \begin{minted}{bash}
-      # You can also assign a name to it using --name
-      docker run -ti -d -p 8080:80 exam:latest
+# You can also assign a name to it using --name
+docker run -ti -d -p 8080:80 exam:latest
 \end{minted}
 
 To get the default page and check it's contents:
 \begin{minted}{bash}
-      wget localhost:8080
-      cat index.html 
+wget localhost:8080
+cat index.html 
 \end{minted} 
 
 % -----|-----|-----|-----|-----|-----|-----|-----|-----|-----
@@ -252,14 +252,14 @@ Content taught: correction of the exam, creating and managing images.
 \subsection{Question 6}
 The wrong Dockerfile was:
 \begin{minted}{bash}
-      # Broken Dockerfile
-      FROM nginx:latest
+# Broken Dockerfile
+FROM nginx:latest
 
-      # Copying HTML files to a folder
-      COPY ./site /usr/share/nginx/html_site
+# Copying HTML files to a folder
+COPY ./site /usr/share/nginx/html_site
 
-      # Default port to Nginx
-      EXPOSE 80
+# Default port to Nginx
+EXPOSE 80
 \end{minted}
 
 To run the code wehad to change some things. The first thing to change about the dockerfile was the source directory \textbf{site} that did not exist from the first place. Then we had to change the target folder. The default nginx folder was \textbf{/usr/share/nginx/html}. So the correct dockerfile would be something like this:
@@ -361,6 +361,5 @@ pandoc main.tex -o README.md --from=latex --to=gfm
 
 \bibliographystyle{plain}
 \bibliography{references}
-
 
 \end{document}
