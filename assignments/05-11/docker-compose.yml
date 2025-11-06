@@ -21,10 +21,11 @@ services:
     ports:
       - 8080:80
     environment:
-      WORDPRESS_DB_HOST: localhost:3306
+      WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wp_user
       WORDPRESS_DB_PASSWORD: ifrn@2025
-      WORPRESS_DB_NAME: wordpress_db
+      # WORPRESS_DB_NAME: wordpress_db | Sintaxe incorreta
+      WORDPRESS_DB_NAME: wordpress_db # Sintaxe correta
     volumes:
       - wp_data:/var/www/html
 

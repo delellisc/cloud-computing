@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Serviço do Banco de Dados PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: postgres_db_net
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    # Porta mapeada APENAS para simular acesso externo,
+    # a web_app não deve usar esta porta para conexão interna.
+    ports:
+      - "5432:5432"
+
+  # Serviço da Aplicação Web (simulando a conexão)
+  web_app:
+    image: alpine/curl # Imagem que permite executar comandos de rede
+    container_name: web_app_net
+    
+    environment:
+      DATABASE_HOST: localhost 
+      DATABASE_PORT: 5432
+    # Simulando a tentativa de conexão: tenta se conectar ao host e porta
+    command: >
+      sh -c "echo 'Tentando conectar ao $DATABASE_HOST:$DATABASE_PORT...' && \
+             curl --fail --silent $DATABASE_HOST:$DATABASE_PORT && \
+             echo 'Conexão bem sucedida (ERRO!)' || \
+             echo 'Falha na conexão (OK!)'"
+    depends_on:
+      - db
+
+# Definição de volumes nomeados para persistência do DB
+volumes:
+  db_data:
