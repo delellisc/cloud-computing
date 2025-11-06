@@ -1,0 +1,4 @@
+# Variáveis de Configuração do Banco de Dados
+DB_NAME=desafio_db_net
+DB_USER=desafio_user_net
+DB_PASSWORD=senha_secreta_456
