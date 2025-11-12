@@ -4,19 +4,19 @@ services:
   db:
     image: postgres:15-alpine
     container_name: postgres_db_challenge
-  environment:  
-    POSTGRES_DB: ${DB_NAME}
-    POSTGRES_USER: ${DB_USER}
-    POSTGRES_PASSWORD: ${DB_PASSWORD}
-  volumes:
-    - db_data:/var/lib/postgresql/data
-  restart: unless-stopped
+    environment:  
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: unless-stopped
 
   web_app:
     image: nginx:latest
     container_name: web_app_challenge
     ports:
-      - "8080:80"
+      - "8090:80"
     environment:
       DATABASE_HOST: db
       DATABASE_PORT: 5432

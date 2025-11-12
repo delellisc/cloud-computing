@@ -4,6 +4,8 @@ services:
   # Serviço do Banco de Dados PostgreSQL
   db:
     image: postgres:15-alpine
+    env_file:
+      - .env
     container_name: postgres_db_net
     environment:
       POSTGRES_DB: ${DB_NAME}
@@ -26,11 +28,11 @@ services:
       DATABASE_HOST: localhost 
       DATABASE_PORT: 5432
     # Simulando a tentativa de conexão: tenta se conectar ao host e porta
-    command: >
-      sh -c "echo 'Tentando conectar ao $DATABASE_HOST:$DATABASE_PORT...' && \
-             curl --fail --silent $DATABASE_HOST:$DATABASE_PORT && \
-             echo 'Conexão bem sucedida (ERRO!)' || \
-             echo 'Falha na conexão (OK!)'"
+    command:
+      sh -c "echo \"Tentando conectar ao $$DATABASE_HOST:$$DATABASE_PORT...\" && \
+        curl --fail --silent $$DATABASE_HOST:$$DATABASE_PORT && \
+        echo 'Conexão bem sucedida (ERRO!)' || \
+        echo 'Falha na conexão (OK!)'"
     depends_on:
       - db
 
